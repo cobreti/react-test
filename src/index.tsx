@@ -1,12 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Title from './components/title';
+import {App} from './app';
 
-const HelloWorld = () => {
-    return (
-        <Title />
-    );
-}
+const app = new App();
 
-ReactDOM.render(<HelloWorld />, document.getElementById("root"));
+app.init();
+app.run();
+
 
