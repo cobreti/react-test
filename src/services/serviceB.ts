@@ -1,5 +1,5 @@
-import {ServiceA} from './serviceA';
 import {Service} from 'typedi';
+import {ServiceA} from '@services/serviceA';
 
 @Service({global: true})
 export class ServiceB {

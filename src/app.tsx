@@ -3,8 +3,8 @@ import Title from './components/title';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Container} from 'typedi';
-import {ServiceA} from './services/serviceA';
-import {ServiceB} from './services/serviceB';
+import {ServiceA} from '@services/serviceA';
+import {ServiceB} from '@services/serviceB';
 
 export class App {
 

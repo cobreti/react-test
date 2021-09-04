@@ -1,13 +1,23 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+//
+//  this plugin doesn't seem to work with webpack 5 >_<
+//
+// const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
 module.exports = {
     entry: path.join(__dirname, "src", "index.tsx"),
     output: { path: path.join(__dirname, "build"), filename: "index.bundle.js" },
     mode: process.env.NODE_ENV || "development",
     resolve: {
+        plugins: [
+        ],
         modules: [path.resolve(__dirname, "src"), "node_modules"],
-        extensions: [".js", ".jsx", ".json", ".ts", ".tsx"]
+        extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
+        alias: {
+            "@services": path.resolve(__dirname, "src/services/")
+        }
     },
     devServer: { static: path.join(__dirname, "src") },
     module: {
