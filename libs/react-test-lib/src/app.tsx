@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import Title from './components/title';
+import LibTitle from './components/libTitle';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Container} from 'typedi';
@@ -17,7 +17,7 @@ export class App {
     run() {
         const HelloWorld = () => {
             return (
-                <Title />
+                <LibTitle />
             );
         };
 
